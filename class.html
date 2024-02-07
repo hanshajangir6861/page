@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+
+        var word = "leetcode"
+
+
+        function repeatTheWord() {
+            let call = word.split("")
+            // console.log(call)
+
+            for (let i = 0; i < word.length; i++) {
+                var str1 = call[i]
+                var output = false
+
+                for (let j = 0; j < word.length; j++) {
+
+                    if (i !== j && str1 === call[j]) {
+                        output = true;
+                        break; // when we compare i to j and it match then it doesnot match the next 
+                    }
+                }
+
+                if (!output) {
+                    return i
+                }
+            }
+            return -1
+        }
+        console.log(repeatTheWord())
+
+    </script>
+</body>
+
+</html>
